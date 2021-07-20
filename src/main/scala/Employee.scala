@@ -1,18 +1,18 @@
-class Employee (empID: Int, var firstName: String, var lastName: String, salary: Double){
-    println("class entered")
-    
-    def prompt(){
-        def this(empID: Int, firstName: String){
-            this(0, "", 0.0)
-        }
+// import java.util.{Date, Locale}
+// import java.text.SimpleDateFormat
+  import scala.io.StdIn.readLine
 
-        def this(){
-            this(0)
-        }
+class Employee {
+    var emp_name: String= ""
+    var emp_dept: String= ""
+    var emp_role: String= "" 
 
-        println("What's your employee's first and last name? ")
-        val fullName = readLine()
-        println(fullName)
+    def set_name (){
+        println("What's your employee's full name? ")
+        var fullName = readLine()
+        emp_name = fullName
+    }
+    def read_emp(){
+        println("Name: " + emp_name + "\n" + "Department:" + emp_dept + "\n" + "Role: " + emp_role)
     }
 }
-

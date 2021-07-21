@@ -4,8 +4,7 @@ object CSV {
   import scala.collection.JavaConversions._
   import scala.collection.mutable.ListBuffer
 
-  val empPath =
-    "C:/Users/sammy/Documents/Revachol/Employee_directory/src/main/scala/employees.csv"
+  val empPath = "C:/Users/sammy/Documents/Revachol/Employee_directory/src/main/scala/employees.csv"
   val empSchema = Array("emp_name", "emp_dept", "emp_role", "emp_id")
 
   def read(): ListBuffer[Map[String, String]] ={
@@ -23,15 +22,20 @@ object CSV {
     return parsedOut
   }
 
-  def write() {
-    read()
+  def write(curr: Map[String,String]) {
     val out = new BufferedWriter(new FileWriter(empPath))
     val writer = new CSVWriter(out)
 
-    val entry = Array("Timothy Gregory", "Accounting", "Manager", "1675")
-    val input = List(empSchema, entry)
-    writer.writeAll(input)
+    writer.writeAll(curr)
+    println("file written")
     out.close()
+  }
+
+  def insert(input: Map[String, String]){
+    val curr = read()
+    curr += input
+    write(curr)
   }
 }
 //to append: read, take the output, append new array to the list
+//problem: using map with key value pairs, which can't be inserted into csv

@@ -3,7 +3,6 @@
 object EmployeeTracker extends App {
 
   def main() {
-    println("main func")
     start()
   }
   def start() {
@@ -15,7 +14,9 @@ object EmployeeTracker extends App {
       start()
     }
     if (command == "write"){
-      val ins: Array[String]  = Array("Timothy Gregory", "Accounting", "Manager", "1675")
+      println("Please enter an employee ID: ")
+      val command = readLine()
+      val ins: Array[String]  = Array("Timothy Gregory", "Accounting", "Manager", command)
       CSV.insert(ins)
       start()
     }
@@ -27,8 +28,4 @@ object EmployeeTracker extends App {
   main()
 }
 
-//OOP employee directory with an employee class
-// dictionary of objects
-//object setter function
-// company budget, changing employee's pay changes budget
 //switch function - modify an entry by extracting it by index, then using index to modify specific entries - name role etc

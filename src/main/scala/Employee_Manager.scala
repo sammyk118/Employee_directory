@@ -4,16 +4,22 @@ object EmployeeTracker extends App {
 
   def main() {
     println("main func")
-    CSV.innerTest()
+    start()
   }
   def start() {
-    print("What would you like to do?  ")
+    print("What would you like to do?  " + '\n' + "Your options are: \n" + "==== read \n" + "==== write \n" + "==== exit \n")
     val command = readLine()
 
-    if (command == "new"){
-      var employee = new Employee()
-      employee.set_name()
-      employee.read_emp()
+    if (command == "read"){
+      CSV.read()
+      start()
+    }
+    if (command == "write"){
+      CSV.write()
+      start()
+    }
+    if (command == "exit"){
+      println("exiting")
     }
 
   }

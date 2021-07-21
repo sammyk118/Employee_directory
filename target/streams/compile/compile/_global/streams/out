@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\sammy\Documents\Revachol\Employee_directory\src\main\scala\Employee_Manager.scala:7:5: not found: value csv[0m
-[0m[[0m[31merror[0m] [0m[0m    csv.innerTest()[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone deprecation (since 2.12.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

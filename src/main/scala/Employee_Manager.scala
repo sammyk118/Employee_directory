@@ -15,7 +15,8 @@ object EmployeeTracker extends App {
       start()
     }
     if (command == "write"){
-      CSV.write()
+      val ins: Array[String]  = Array("Timothy Gregory", "Accounting", "Manager", "1675")
+      CSV.insert(ins)
       start()
     }
     if (command == "exit"){
@@ -30,3 +31,4 @@ object EmployeeTracker extends App {
 // dictionary of objects
 //object setter function
 // company budget, changing employee's pay changes budget
+//switch function - modify an entry by extracting it by index, then using index to modify specific entries - name role etc

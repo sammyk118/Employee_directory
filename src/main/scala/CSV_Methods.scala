@@ -4,25 +4,35 @@ object CSV {
   import scala.collection.JavaConversions._
   import scala.collection.mutable.ListBuffer
 
-  val empPath = "C:/Users/sammy/Documents/Revachol/Employee_directory/src/main/scala/employees.csv"
-  val empSchema = Array("emp_name", "emp_dept", "emp_role", "emp_id")
+  val empPath = "./src/main/scala/employees.csv"
+  // Schema: emp_name, emp_dept, emp_role, emp_id
 
-  def read(): ListBuffer[Map[String, String]] ={
+  def read(): ListBuffer[Array[String]] = {
     val bufferedSource = scala.io.Source.fromFile(s"$empPath")
-    println(bufferedSource)
-    var parsedOut = ListBuffer[Map[String, String]]()
+    var data = ListBuffer[Array[String]]()
     for (line <- bufferedSource.getLines) {
-      val cols = line.split(",").map(_.trim)
-      println(s"${cols(0)}|${cols(1)}|${cols(2)}|${cols(3)}")
-      val map = Map[String, String]("Name" ->  s"${cols(0)}", "Department" ->  s"${cols(1)}", "Role" ->  s"${cols(2)}", "ID" -> s"${cols(3)}")
-      parsedOut += map
+      val cols = line.split(",").map(_.trim) //split entries by comma, trim whitespace
+      val arr = Array[String](
+        s"${cols(0)}",
+        s"${cols(1)}",
+        s"${cols(2)}",
+        s"${cols(3)}"
+      )
+      println("\nArray: ", arr.mkString)
+      data += arr
     }
-    println("Parsed Out: " + parsedOut)
+    parse(data) //print file contents
     bufferedSource.close
-    return parsedOut
+    return data
   }
 
-  def write(curr: Map[String,String]) {
+  def parse(data: ListBuffer[Array[String]]) {
+    println("\nParsed Out: ")
+    for (element <- data)
+      println("Name: ", element(0), "\nDepartment: ", element(1), "\nRole: ", element(2), "\nID: ", element(3))
+  }
+
+  def write(curr: ListBuffer[Array[String]]) {
     val out = new BufferedWriter(new FileWriter(empPath))
     val writer = new CSVWriter(out)
 
@@ -31,11 +41,12 @@ object CSV {
     out.close()
   }
 
-  def insert(input: Map[String, String]){
+  def insert(input: Array[String]) {
+    println("INSERTING INTO CSV: ", input.mkString)
+
     val curr = read()
     curr += input
     write(curr)
   }
 }
-//to append: read, take the output, append new array to the list
-//problem: using map with key value pairs, which can't be inserted into csv
+//to insert: read, take the output, append new array to the list, overwrite file

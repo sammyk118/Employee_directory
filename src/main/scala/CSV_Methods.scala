@@ -1,5 +1,6 @@
 object CSV {
-  import java.io.{BufferedWriter, FileWriter}
+  // import java.io.{BufferedWriter, FileWriter}
+  import java.io.{PrintWriter, File}
   import au.com.bytecode.opencsv.CSVWriter
   import scala.collection.JavaConversions._
   import scala.collection.mutable.ListBuffer
@@ -22,18 +23,30 @@ object CSV {
       )
       data += arr
     }
-    parse(data) //print file contents
+    print(data) //print file contents
     bufferedSource.close
     return data
   }
 
   def write(curr: ListBuffer[Array[String]]) {
-    val out = new BufferedWriter(new FileWriter(empPath))
-    val writer = new CSVWriter(out)
+    // val out = new BufferedWriter(new FileWriter(empPath))
+    // val writer = new CSVWriter(out)
+    val out = new PrintWriter(new File(empPath))
+    val rawData = parse(curr)
 
-    writer.writeAll(curr)
-    println("file written")
+    out.write(rawData)
+    // writer.writeAll(curr)
+    // println("file written")
     out.close()
+  }
+
+  def parse(data: ListBuffer[Array[String]]): String = {
+    var rawData:String = ""
+    for (element <- data){
+      rawData += element.mkString(",")
+      rawData += "\n"
+    }
+    return rawData
   }
 
   def insert(input: Array[String]) { //insert takes current CSV file, appends new entry, then passes to write
@@ -48,9 +61,9 @@ object CSV {
     // println(idArr)
     curr += input
     write(curr)
-  }
+    }
 
-  def parse(data: ListBuffer[Array[String]]) { //parse prints entries in a neatish fashion
+  def print(data: ListBuffer[Array[String]]) { //parse prints entries in a neatish fashion
     println("\nParsed Out: ")
     for (element <- data)
       println(
@@ -64,6 +77,12 @@ object CSV {
           element(3) +
           "\nEND OF ENTRY\n"
       )
+  }
+
+  def overWrite(){
+    val out = read()
+    write(out)
+    read()
   }
 }
 //to insert: read, take the output, append new array to the list, overwrite file

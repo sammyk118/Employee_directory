@@ -1,1 +1,13 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\employeemanagement_2.12-0.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\employeemanagement_2.12-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CSV$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\classes\CSV$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CSV.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\classes\CSV.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmployeeTracker$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\classes\EmployeeTracker$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmployeeTracker$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\classes\EmployeeTracker$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmployeeTracker.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\classes\EmployeeTracker.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

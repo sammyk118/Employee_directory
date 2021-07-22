@@ -22,7 +22,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to C:\Users\sammy\Documents\Revachol\Employee_directory\target\scala-2.12\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.5.3:compile for Scala 2.12.14[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 489a9d1c for Scala compiler version 2.12.14[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 2f589bbd for Scala compiler version 2.12.14[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\resources.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\rt.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\sunrsasign.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\jsse.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\jce.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\charsets.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\lib\jfr.jar;C:\Users\sammy\AppData\Local\Coursier\cache\jvm\adopt@1.8.0-292\jre\classes;C:\Users\sammy\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.12.14\scala-library-2.12.14.jar[0m
@@ -34,5 +34,5 @@
 [0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.4895208 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.5569338 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

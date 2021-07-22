@@ -1,4 +1,4 @@
-  import scala.io.StdIn.readLine
+import scala.io.StdIn.readLine
 
 object EmployeeTracker extends App {
 
@@ -6,14 +6,16 @@ object EmployeeTracker extends App {
     start()
   }
   def start() {
-    print("What would you like to do?  " + '\n' + "Your options are: \n" + "==== read \n" + "==== write \n" + "==== overwrite \n" + "==== exit \n")
+    print(
+      "\nWhat would you like to do?  " + '\n' + "Your options are: \n" + "==== read \n" + "==== write \n" + "==== overwrite \n" + "==== exit \n"
+    )
     val command = readLine()
 
-    if (command == "read"){
-      CSV.read()
+    if (command == "read") {
+      CSV.read(0)
       start()
     }
-    if (command == "write"){
+    if (command == "write") {
       println("Please enter the employee's Name: ")
       val empName = readLine()
       println("\nPlease enter the employee's Department: ")
@@ -23,25 +25,24 @@ object EmployeeTracker extends App {
       println("\nPlease enter an employee ID: ")
       val empID = readLine()
 
-      val ins: Array[String]  = Array(empName, empDept, empRole, empID)
+      val ins: Array[String] = Array(empName, empDept, empRole, empID)
       CSV.insert(ins)
       start()
     }
-    if (command == "overwrite"){
+    if (command == "overwrite") {
       CSV.overWrite()
       start()
     }
-    if (command == "exit"){
+    if (command == "exit") {
       println("exiting")
       exit()
-    }
-    else {
+    } else {
       println("invalid command entered, please try again")
       start()
     }
 
   }
-  def exit(){System.exit(0)}
+  def exit() { System.exit(0) }
   main()
 }
 

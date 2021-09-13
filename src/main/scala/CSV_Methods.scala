@@ -1,6 +1,5 @@
 object CSV {
   import java.io.{PrintWriter, File}
-  import au.com.bytecode.opencsv.CSVWriter
   import scala.collection.JavaConversions._
   import scala.collection.mutable.ListBuffer
 
